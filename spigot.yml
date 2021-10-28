@@ -42,8 +42,7 @@ messages:
   restart: Server is restarting
 advancements:
   disable-saving: false
-  disabled:
-  - minecraft:story/disabled
+  disabled: []
 stats:
   disable-saving: false
   forced-stats: {}
@@ -63,38 +62,39 @@ commands:
   - /skill
 world-settings:
   default:
+    thunder-chance: 100000
     verbose: false
     wither-spawn-sound-radius: 0
     item-despawn-rate: 6000
     view-distance: default
     enable-zombie-pigmen-portal-spawns: true
-    seed-village: 10387312
-    seed-desert: 14357617
-    seed-igloo: 14357618
-    seed-jungle: 14357619
-    seed-swamp: 14357620
-    seed-monument: 10387313
-    seed-shipwreck: 165745295
-    seed-ocean: 14357621
-    seed-outpost: 165745296
-    seed-endcity: 10387313
-    seed-slime: 987234911
-    seed-bastion: 30084232
-    seed-fortress: 30084232
-    seed-mansion: 10387319
-    seed-fossil: 14357921
-    seed-portal: 34222645
+    seed-village: 10487312
+    seed-desert: 14357627
+    seed-igloo: 14357628
+    seed-jungle: 14357639
+    seed-swamp: 14357630
+    seed-monument: 10487313
+    seed-shipwreck: 165745297
+    seed-ocean: 14357631
+    seed-outpost: 165745298
+    seed-endcity: 10487313
+    seed-slime: 907234911
+    seed-bastion: 30184232
+    seed-fortress: 30184232
+    seed-mansion: 10487319
+    seed-fossil: 14357931
+    seed-portal: 38222645
     hopper-amount: 1
     max-tnt-per-tick: 100
     arrow-despawn-rate: 1200
     trident-despawn-rate: 1200
     mob-spawn-range: 8
     nerf-spawner-mobs: false
-    zombie-aggressive-towards-villager: true
+    zombie-aggressive-towards-villager: false
     end-portal-sound-radius: 0
     hanging-tick-frequency: 100
     dragon-death-sound-radius: 0
-    max-entity-collisions: 8
+    max-entity-collisions: 6
     entity-tracking-range:
       players: 48
       animals: 48
@@ -133,13 +133,13 @@ world-settings:
       cactus-modifier: 100
       cane-modifier: 100
       melon-modifier: 100
-      mushroom-modifier: 100
+      mushroom-modifier: 200
       pumpkin-modifier: 100
       sapling-modifier: 100
       beetroot-modifier: 100
       carrot-modifier: 100
       potato-modifier: 100
-      wheat-modifier: 100
+      wheat-modifier: 200
       netherwart-modifier: 100
       vine-modifier: 100
       cocoa-modifier: 100
