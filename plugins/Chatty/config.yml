@@ -83,7 +83,7 @@ chats:
   local:
     enable: true
     display-name: 'Local'
-    format: '&e[&6Local&e] &r%luckperms_prefix% {player}%luckperms_suffix%&8: &f{message}'
+    format: '&e[&6Local&e] &r[%luckperms_prefix%] {player} %luckperms_suffix%&8: &f{message}'
     range: 100
     cooldown: -1
     command: 'localchat'
@@ -92,7 +92,7 @@ chats:
   global:
     enable: true
     display-name: 'Global'
-    format: '&e[&aGlobal&e] &r%luckperms_prefix% {player}%luckperms_suffix%&8: &f{message}'
+    format: '&e[&aGlobal&e] &r[%luckperms_prefix%] {player} %luckperms_suffix%&8: &f{message}'
     range: -1
     symbol: '!'
     cooldown: -1
@@ -146,8 +146,8 @@ pm:
   # {sender-suffix}, {recipient-suffix} - suffixes of sender and recipient.
   # {message} - private message.
   format:
-    recipient: '&7{sender-prefix}{sender-name} &6-> &7{recipient-prefix}{recipient-name}: &f{message}'
-    sender: '&7{sender-prefix}{sender-name} &6-> &7{recipient-prefix}{recipient-name}: &f{message}'
+    recipient: '&7{sender-name} &6-> &7{recipient-name}: &f{message}'
+    sender: '&7{sender-name} &6-> &7{recipient-name}: &f{message}'
 
   commands:
     msg:
@@ -356,10 +356,10 @@ notifications:
       # Permission: chatty.notification.chat.default
       default:
         # Messages interval.
-        time: 60
+        time: 900
 
         # Messages prefix.
-        prefix: ''
+        prefix: '[&cINFO&r]'
 
         # List of messages.
         # Supports PlaceholderAPI.
@@ -369,8 +369,7 @@ notifications:
         # For example: {"text":"","extra":[{"text":"Try to search it with ","color":"white"},{"text":"search system","color":"yellow","clickEvent":{"action":"open_url","value":"http://google.com"},"hoverEvent":{"action":"show_text","value":"Search it in Google"}}]}
         # This JSON will be a message "Try to search it with search system" with hover and clickable text
         messages:
-          - '&cThe server is using Chatty!\n&aOur address: 127.0.0.1\n&aVisit out site: example.com'
-          - '&aThe server is using Chatty!'
+          - '{"text":"","extra":["",{"text":"Admin","color":"#55AAFF"},{"text":":","color":"white"},{"text":" 33__Hec4acTbR ","color":"#CE9178"},{"text":"Contacts:"},{"text":" ","clickEvent":{"action":"open_url","value":"https://t.me/HE_k_TO"}},{"text":"telegram","color":"blue","clickEvent":{"action":"open_url","value":"https://t.me/HE_k_TO"},"hoverEvent":{"action":"show_text","contents":"click here"}}]}'
 
         # Permission for seeing notification.
         # Default: true
@@ -413,7 +412,7 @@ notifications:
   # Title notifications.
   title:
     # On/off title notifications.
-    enable: true
+    enable: false
 
     # Notification lists.
     lists:
@@ -596,7 +595,7 @@ miscellaneous:
       enable: true
 
       # Set to '' if you want to make it hidden.
-      message: '&8> &e%luckperms_prefix% {player}%luckperms_suffix% &ejoined the server.'
+      message: '&8> &e[%luckperms_prefix%] {player} &ejoined the server.'
 
       # Plays sound to all, when player joins.
       # Remove the line if not needed.
@@ -610,7 +609,7 @@ miscellaneous:
       first-join:
         # First join message.
         # Set to '' if you don't want to see special message for the first join.
-        message: '&8> &e%luckperms_prefix% {player}%luckperms_suffix% &6joined the server for the first time!'
+        message: '&8> &e[%luckperms_prefix%] {player} &6joined the server for the first time!'
         # Plays sound to all, when player joins.
         # Remove the line if not needed.
         sound: ORB_PICKUP
@@ -619,7 +618,7 @@ miscellaneous:
       enable: true
 
       # Set to '' if you want to make it hidden.
-      message: '&8> &e%luckperms_prefix% {player}%luckperms_suffix% &eleft the server.'
+      message: '&8> &e[%luckperms_prefix%] {player} &eleft the server.'
 
       # Plays sound to all, when player quits.
       # Remove the line if not needed.
@@ -633,7 +632,7 @@ miscellaneous:
       enable: true
 
       # Set to '' if you want to make it hidden.
-      message: '&8> &e%luckperms_prefix% {player}%luckperms_suffix% &edied.'
+      message: '&8> &e[%luckperms_prefix%] {player} &edied.'
 
       # Plays sound to all, when player dies.
       # Remove the line if not required.
